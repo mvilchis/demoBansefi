@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    android:orientation="vertical"
+    >
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1"
+        android:weightSum="4.5">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            >
+            <ImageView
+                android:src="@drawable/logo_bansefi"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="1"
+
+            >
+            <ImageView
+                android:id="@+id/logo1"
+                android:src="@drawable/logo1"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="0.5" />
+            <ImageView
+                android:id="@+id/logo2"
+                android:src="@drawable/logo2"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="1"
+
+            >
+            <ImageView
+                android:id="@+id/logo3"
+                android:src="@drawable/logo3"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="0.5" />
+            <ImageView
+                android:id="@+id/logo4"
+                android:src="@drawable/logo4"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="1"
+
+            >
+            <ImageView
+                android:id="@+id/logo6"
+                android:src="@drawable/logo6"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="0.5" />
+            <ImageView
+                android:id="@+id/logo7"
+                android:src="@drawable/logo7"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="1"
+
+            >
+            <ImageView
+                android:id="@+id/logo8"
+                android:src="@drawable/logo8"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="0.5" />
+            <ImageView
+                android:id="@+id/logo9"
+                android:src="@drawable/logo9"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                />
+        </TableRow>
+
+        </TableLayout>
+</LinearLayout>

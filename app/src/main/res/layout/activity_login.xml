@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+            <ImageView
+                android:id="@+id/logo_view"
+                android:src="@drawable/logo_bansefi"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_marginBottom="50dp">
+            <TextView
+                android:id="@+id/welcome_bansefi"
+                android:textColor="@color/color_text"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:text="@string/activation_label_text" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+            <ImageView
+                android:id="@+id/contact"
+                android:src="@drawable/user_logo"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/label_integrant"
+                android:layout_width="wrap_content"
+                android:text="@string/id_user"
+                android:gravity="center"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            >
+            <EditText
+                android:id="@+id/user_id"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@color/color_text"
+                android:singleLine="true" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+            <ImageView
+                android:src="@drawable/candado"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/password"
+                android:gravity="center"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            >
+            <EditText
+                android:id="@+id/user_password"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@color/color_text"
+                android:singleLine="true" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:weightSum="1">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sign_in"
+                android:layout_weight="1" />
+        </TableRow>
+    </TableLayout>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <ImageButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sign_in"
+            android:layout_weight="1" />
+    </TableRow>
+</LinearLayout>

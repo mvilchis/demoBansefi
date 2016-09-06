@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ProgressBar
+        android:id="@+id/table_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <TableLayout
+        android:id="@+id/login_table"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#E7E2E1">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:src="@drawable/logo_bansefi"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+            <ImageView
+                android:id="@+id/imageView2"
+                android:src="@drawable/user_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:layout_marginTop="50dp" />
+        </TableRow>
+
+        <LinearLayout
+            android:id="@+id/idForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/id_label"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/user_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textColor="@color/color_text"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:weightSum="1">
+
+            <ImageButton
+                android:id="@+id/continue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gray_button"
+                android:layout_weight="1" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
