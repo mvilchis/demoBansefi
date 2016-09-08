@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F1F1F1"
+    android:weightSum="100" >
+    <include
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        layout="@layout/toolbar">
+    </include>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="90"
+        android:weightSum="4">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="2"
+            android:gravity="center|bottom"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:weightSum="1">
+
+            <ImageView
+                android:src="@drawable/read_qr"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="15dp" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Lee el código generado o ingrese manualmente el código"
+                android:gravity="center"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="1"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:background="@drawable/white_cell"
+                android:hint="Ingrese el codigo manualmente"
+                android:textSize="20sp"
+                android:singleLine="true"
+                android:textAlignment="textStart" />
+
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

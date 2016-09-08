@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F1F1F1"
+    android:weightSum="100" >
+        <include
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            layout="@layout/toolbar">
+        </include>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:src="@drawable/pay" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="80"
+            android:weightSum="5">
+
+            <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="1"
+            >
+            <TextView
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@color/green_color_text"
+                android:layout_width="wrap_content"
+                android:text="@string/pay_with_cellphone" />
+            </TableRow>
+        <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="1"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:background="@drawable/white_cell"
+                android:hint="@string/amount"
+                android:textSize="20sp"
+                android:singleLine="true"
+                android:textAlignment="textStart" />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="1"
+
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_cell"
+                    android:hint="@string/subject"
+                    android:textSize="20sp"
+                    android:singleLine="true"
+                    android:textAlignment="textStart" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:orientation="vertical"
+                android:background="#F1F1F1"
+                android:weightSum="3">
+
+                <ImageButton
+                    android:id="@+id/next_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/button_image"
+
+                    android:layout_weight="1"
+                    android:background="#F1F1F1" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>

@@ -1,0 +1,154 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F1F1F1"
+    android:weightSum="100" >
+    <include
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        layout="@layout/toolbar">
+    </include>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:src="@drawable/pay" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80"
+        android:weightSum="5">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:background="@drawable/gray_cell"
+
+            >
+            <TextView
+                android:textColor="@color/gray_color_text"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:text="@string/buy_credit"
+                android:textAlignment="gravity" />
+            <ImageView
+                android:src="@drawable/back_white"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                />
+        </TableRow>
+        <!-- Pay-->
+        <TableRow
+            android:id="@+id/pay_with_cellphone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:background="@drawable/gray_cell"
+
+            >
+            <TextView
+                android:id="@+id/pay_cell_child"
+                android:textColor="@color/gray_color_text"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:text="@string/pay_with_cellphone"
+                android:textAlignment="gravity" />
+            <ImageView
+                android:src="@drawable/back_white"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                />
+        </TableRow>
+        <!-- Move money-->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:background="@drawable/gray_cell"
+
+            >
+            <TextView
+                android:textColor="@color/gray_color_text"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:text="@string/move_money"
+                android:textAlignment="gravity" />
+            <ImageView
+                android:src="@drawable/back_white"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                />
+        </TableRow>
+        <!-- pay to other account-->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:background="@drawable/gray_cell"
+
+            >
+            <TextView
+                android:textColor="@color/gray_color_text"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:text="@string/pay_to_account"
+                android:textAlignment="gravity" />
+            <ImageView
+                android:src="@drawable/back_white"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                />
+        </TableRow>
+        <!-- Pay to bank-->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="2"
+            android:background="@drawable/gray_cell"
+
+            >
+            <TextView
+            android:textColor="@color/gray_color_text"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:text="@string/pay_to_bank"
+            android:textAlignment="gravity" />
+            <ImageView
+                android:src="@drawable/back_white"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0dp"
+                />
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>

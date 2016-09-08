@@ -16,6 +16,16 @@
     <string name="classic_label">Clásica </string>
     <string name="save_label">Ahorro </string>
     <string name="credit_label">Crédito </string>
-
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="buy_credit">Compra Tiempo Aire</string>
+    <string name="pay_with_cellphone">Paga con tu celular</string>
+    <string name="move_money">Mueve dinero entre tus cuentas</string>
+    <string name="pay_to_account">Paga a otra cuenta Bansefi</string>
+    <string name="pay_to_bank">Paga a otros bancos</string>
+    <string name="subject">Asunto (Opcional)</string>
+    <string name="amount">Monto $60</string>
+    <string name="qr_code">Código QR</string>
+    <string name="numeric_code">Código Numérico</string>
+    <string name="message_pay">Si destiantario tine 1 minuto 40 segundos para Recibir este Pago \n Tiempo restante</string>
+    <string name="time">Tiempo restante</string>
+    <string name="advice">Presente le código QR al destinatario o envíe el código numérico</string>
 </resources>

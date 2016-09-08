@@ -10,25 +10,47 @@ import android.widget.ImageView;
 import com.datos.mvilchis.bancavf.R;
 
 /**
- * Created by Admin on 05/09/2016.
+ * Main activity that show all items in a table
+ * @author Miguel Alonso Vilchis Domínguez
  */
 public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageView logo1Img = (ImageView)findViewById(R.id.logo1);
-        //set a onclick listener for when the button gets clicked
+        /*Manage each image one by one */
+        //************* Declaration of intents *************
+        final Intent consultation_intent = new Intent(this, ConsultationActivity.class);
+        final Intent payment_intent = new Intent(this, PaymentActivity.class);
+        final Intent collect_intent = new Intent(this, CollectActivity.class);
 
-        logo1Img.setOnClickListener(new View.OnClickListener() {
-            //Start new list activity
+        //************* Consultation  *************
+        final ImageView consultation_image = (ImageView)findViewById(R.id.logo1);
+        consultation_image.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent consultationIntent = new Intent(MainActivity.this, ConsultaActivity.class);
-                startActivity(consultationIntent);
-                finish();
+                consultation_intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(consultation_intent);
             }
-    });
+        });
+        //************* Payment  *************
+        final ImageView payment_image = (ImageView)findViewById(R.id.logo3);
+        payment_image.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                payment_intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(payment_intent);
+            }
+        });
+        //************* Collect **************
+        final ImageView collect_image = (ImageView)findViewById(R.id.logo4);
+        collect_image.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                collect_intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(collect_intent);
+            }
+        });
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

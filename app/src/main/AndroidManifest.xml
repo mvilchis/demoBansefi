@@ -18,33 +18,103 @@
             android:icon= "@drawable/logo1">
 
         </activity>
+
+        <activity android:name=".activity.RegisterUserActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
         <activity
-            android:name=".activity.MainActivity"
-            android:windowSoftInputMode="adjustPan|stateVisible">
+            android:name=".activity.ActivationActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+        </activity>
+        <activity
+        android:name=".activity.MainActivity"
+        android:windowSoftInputMode="adjustPan|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".activity.RegisterUserActivity"
-            android:windowSoftInputMode="adjustPan|stateVisible">
-        </activity>
+        <!-- Consultation activities -->
         <activity
-            android:name=".activity.ActivationActivity"
-            android:windowSoftInputMode="adjustPan|stateVisible">
-        </activity>
-        <activity
-            android:name=".activity.LoginActivity"
-            android:windowSoftInputMode="adjustPan|stateVisible">
-        </activity>
-        <activity
-            android:name=".activity.ConsultaActivity"
+            android:name=".activity.ConsultationActivity"
             android:parentActivityName=".activity.MainActivity"
-            android:windowSoftInputMode="adjustPan|stateVisible">
-
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
         </activity>
-
+        <activity
+            android:name=".activity.MovementActivity"
+            android:parentActivityName=".activity.ConsultationActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.ConsultationActivity"/>
+        </activity>
+        <!-- Payment Activities -->
+        <activity
+            android:name=".activity.PaymentActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".activity.PaymentCellActivity"
+            android:parentActivityName=".activity.PaymentActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.PaymentActivity"/>
+        </activity>
+        <activity
+            android:name=".activity.PaymentQrActivity"
+            android:parentActivityName=".activity.PaymentCellActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.PaymentCellActivity"/>
+        </activity>
+        <activity
+            android:name=".activity.PaymentCodeActivity"
+            android:parentActivityName=".activity.PaymentCellActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.PaymentCellActivity"/>
+        </activity>
+        <!-- Collect Activities -->
+        <activity
+            android:name=".activity.CollectActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".activity.CollectReceiveActivity"
+            android:parentActivityName=".activity.CollectActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.CollectActivity"/>
+        </activity>
+        <activity
+            android:name=".activity.CollectSuccessActivity"
+            android:parentActivityName=".activity.CollectReceiveActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.CollectReceiveActivity"/>
+        </activity>
     </application>
 
 </manifest>

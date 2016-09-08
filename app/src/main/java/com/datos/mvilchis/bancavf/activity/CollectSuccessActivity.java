@@ -10,20 +10,26 @@ import android.widget.ImageView;
 import com.datos.mvilchis.bancavf.R;
 
 /**
- * Created by Admin on 05/09/2016.
+ * Created by Admin on 08/09/2016.
  */
-public class ConsultaActivity extends Activity {
+public class CollectSuccessActivity  extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_consulta);
-
-
+        setContentView(R.layout.activity_success);
+        /**************  Set return button ***************/
+        ImageView return_to_parent_button = (ImageView)findViewById(R.id.return_to_parent);
+        return_to_parent_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        //getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 }
+
+
