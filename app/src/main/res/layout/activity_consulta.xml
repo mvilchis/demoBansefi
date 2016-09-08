@@ -1,0 +1,123 @@
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F1F1F1"
+        android:weightSum="100" >
+        <include
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            layout="@layout/toolbar">
+        </include>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:src="@drawable/consulta" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:weightSum="3">
+        <!-- Clasica Incio -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="3"
+            >
+            <TextView
+                android:textColor="@color/gray_color_text"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:text="@string/classic_label" />
+            <TextView
+                android:textColor="@color/green_color_text"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:text="$5.243" />
+            <ImageView
+                android:id="@+id/movimientos1"
+                android:src="@drawable/movimientos"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                />
+        </TableRow>
+            <!-- Clasic end-->
+            <!-- Save -->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="3"
+                >
+                <TextView
+                    android:textColor="@color/gray_color_text"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:text="@string/save_label" />
+                <TextView
+                    android:textColor="@color/color_text"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:text="$1.343" />
+                <ImageView
+                    android:id="@+id/movimientos2"
+                    android:src="@drawable/movimientos"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+            <!-- Save End -->
+            <!-- Credit -->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="3"
+                >
+                <TextView
+                    android:textColor="@color/gray_color_text"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:text="@string/credit_label" />
+                <TextView
+                    android:textColor="@color/color_text"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:text="$32.588" />
+                <ImageView
+                    android:id="@+id/movimientos3"
+                    android:src="@drawable/movimientos"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    />
+            </TableRow>
+
+        </TableLayout>
+
+
+    </LinearLayout>

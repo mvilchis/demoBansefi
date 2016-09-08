@@ -13,6 +13,9 @@
     <string name="welcome_bansefi">Bienvenido a Bansefi</string>
     <string name="id_user">ID Integrante</string>
     <string name="password">Contraseña</string>
+    <string name="classic_label">Clásica </string>
+    <string name="save_label">Ahorro </string>
+    <string name="credit_label">Crédito </string>
 
     <string name="action_sign_in_short">Sign in</string>
 </resources>

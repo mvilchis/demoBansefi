@@ -38,6 +38,12 @@
             android:name=".activity.LoginActivity"
             android:windowSoftInputMode="adjustPan|stateVisible">
         </activity>
+        <activity
+            android:name=".activity.ConsultaActivity"
+            android:parentActivityName=".activity.MainActivity"
+            android:windowSoftInputMode="adjustPan|stateVisible">
+
+        </activity>
 
     </application>
 

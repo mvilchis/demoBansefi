@@ -12,22 +12,13 @@ import com.datos.mvilchis.bancavf.R;
 /**
  * Created by Admin on 05/09/2016.
  */
-public class MainActivity extends Activity {
+public class ConsultaActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ImageView logo1Img = (ImageView)findViewById(R.id.logo1);
-        //set a onclick listener for when the button gets clicked
+        setContentView(R.layout.activity_consulta);
 
-        logo1Img.setOnClickListener(new View.OnClickListener() {
-            //Start new list activity
-            public void onClick(View v) {
-                Intent consultationIntent = new Intent(MainActivity.this, ConsultaActivity.class);
-                startActivity(consultationIntent);
-                finish();
-            }
-    });
+
     }
 
     @Override
