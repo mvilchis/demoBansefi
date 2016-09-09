@@ -22,6 +22,7 @@
         android:layout_weight="80"
         android:weightSum="5">
         <TableRow
+            android:id="@+id/pay_credit"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -30,6 +31,7 @@
 
             >
             <TextView
+                android:id="@+id/child_credit"
                 android:textColor="@color/gray_color_text"
                 android:textSize="20sp"
                 android:layout_weight="1"
@@ -74,6 +76,7 @@
         </TableRow>
         <!-- Move money-->
         <TableRow
+            android:id="@+id/pay_movement"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -82,6 +85,7 @@
 
             >
             <TextView
+                android:id="@+id/child_movement"
                 android:textColor="@color/gray_color_text"
                 android:textSize="20sp"
                 android:layout_weight="1"
@@ -99,6 +103,7 @@
         </TableRow>
         <!-- pay to other account-->
         <TableRow
+            android:id="@+id/pay_account"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -107,6 +112,7 @@
 
             >
             <TextView
+                android:id="@+id/child_account"
                 android:textColor="@color/gray_color_text"
                 android:textSize="20sp"
                 android:layout_weight="1"
@@ -124,6 +130,7 @@
         </TableRow>
         <!-- Pay to bank-->
         <TableRow
+            android:id="@+id/pay_bank"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -132,6 +139,7 @@
 
             >
             <TextView
+                android:id="@+id/child_bank"
             android:textColor="@color/gray_color_text"
             android:textSize="20sp"
             android:layout_weight="1"
