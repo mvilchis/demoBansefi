@@ -7,6 +7,7 @@
     <string name="error_invalid_password">La contraseña es muy corta</string>
     <string name="error_field_required">Este campo es requerido</string>
     <string name="error_not_match"> Las contraseñas no coinciden</string>
+    <string name="error_not_number"> Se requiere un campo numérico</string>
     <string name="id_label">Ingrese ID Integrante</string>
     <string name="activation_label_text">Su Código de Activación es</string>
     <string name="especification">Indique este código a su pagador</string>
@@ -22,7 +23,7 @@
     <string name="pay_to_account">Paga a otra cuenta Bansefi</string>
     <string name="pay_to_bank">Paga a otros bancos</string>
     <string name="subject">Asunto (Opcional)</string>
-    <string name="amount">Monto $60</string>
+    <string name="amount">Monto</string>
     <string name="qr_code">Código QR</string>
     <string name="numeric_code">Código Numérico</string>
     <string name="message_pay">Si destiantario tine 1 minuto 40 segundos para Recibir este Pago \n Tiempo restante</string>

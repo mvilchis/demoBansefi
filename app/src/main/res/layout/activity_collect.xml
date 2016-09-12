@@ -65,7 +65,23 @@
                 android:hint="Ingrese el codigo manualmente"
                 android:textSize="20sp"
                 android:singleLine="true"
-                android:textAlignment="textStart" />
+                />
+
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="1"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+            <ImageButton
+                android:id="@+id/continue_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/button_image"
+                android:layout_weight="1"
+                android:background="@color/app_background" />
 
         </TableRow>
     </TableLayout>

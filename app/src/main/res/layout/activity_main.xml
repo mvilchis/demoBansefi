@@ -13,9 +13,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="90"
+        android:shrinkColumns="*"
+        android:stretchColumns="*"
         android:weightSum="4">
 
         <TableRow
+            android:id="@+id/consultation_table"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -27,17 +30,19 @@
                 android:src="@drawable/logo1"
                 android:layout_gravity="center"
                 android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5" />
             <ImageView
                 android:id="@+id/logo2"
                 android:src="@drawable/logo2"
                 android:layout_gravity="center"
                 android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 />
         </TableRow>
 
-        <TableRow
+          <TableRow
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

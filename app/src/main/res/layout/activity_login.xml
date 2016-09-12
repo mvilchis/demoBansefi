@@ -117,6 +117,7 @@
                 android:maxLines="1"
                 android:textAlignment="center"
                 android:textSize="20sp"
+                android:inputType="textPassword"
                 android:textColor="@color/color_text"
                 android:singleLine="true" />
         </TableRow>

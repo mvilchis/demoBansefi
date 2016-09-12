@@ -1,6 +1,8 @@
 package com.datos.mvilchis.bancavf.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -37,6 +39,13 @@ public class RegisterActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean Islogin = prefs.getBoolean("Islogin", false);
+        if (Islogin){
+            Intent main_activity = new Intent(this, MainActivity.class);
+            startActivity(main_activity);
+            finish();
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         // Set up the login form.

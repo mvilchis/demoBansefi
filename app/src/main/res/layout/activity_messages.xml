@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F1F1F1"
+    android:weightSum="100" >
+    <include
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        layout="@layout/toolbar">
+    </include>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:weightSum="6">
+    <!-- Clasica Incio -->
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:weightSum="4"
+        >
+        <TextView
+            android:textColor="@color/red_background"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:text="Mensajes" />
+        <ImageView
+            android:src="@drawable/logo7"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:textColor="@color/green_color_text"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:text="Elementos" />
+        <TextView
+            android:textColor="@color/red_background"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:text="Sin leer" />
+
+    </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="3"
+            android:background="@drawable/gray_cell"
+                >
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:text="New CheckBox"
+                    android:id="@+id/checkBox"
+                    android:layout_weight="1" />
+                <TextView
+                    android:textColor="@color/gray_color_text"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:text="Asunto" />
+                <TextView
+                    android:textColor="@color/gray_color_text"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:text="Recibido" />
+            </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:weightSum="4"
+            android:background="@drawable/gray_cell"
+            >
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="New CheckBox"
+                android:id="@+id/checkBox_1"
+                android:layout_weight="1" />
+            <ImageView
+                android:src="@drawable/logo7"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:textColor="@color/gray_color_text"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:text="Asunto" />
+            <TextView
+                android:textColor="@color/gray_color_text"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:text="Recibido" />
+        </TableRow>
+        </TableLayout>
+
+
+
+</LinearLayout>

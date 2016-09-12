@@ -34,13 +34,15 @@ public class CollectActivity  extends  Activity {
                 finish();
             }
         });
-        try {
-            Thread.sleep(10000);
-            Intent receive_intent = new Intent(this,CollectReceiveActivity.class );
-            startActivity(receive_intent);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        /******** Continue to next view *******************/
+        ImageButton continue_button = (ImageButton) findViewById(R.id.continue_button);
+        continue_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent receive_intent = new Intent(CollectActivity.this, CollectReceiveActivity.class);
+                startActivity(receive_intent);
+            }});
+
     }
 
     @Override

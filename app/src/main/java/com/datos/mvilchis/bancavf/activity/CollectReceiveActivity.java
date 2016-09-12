@@ -35,9 +35,9 @@ public class CollectReceiveActivity extends Activity {
         mLoginFormView = findViewById(R.id.login_table);
         mProgressView = findViewById(R.id.table_progress);
         ImageButton mSignInButton = (ImageButton) findViewById(R.id.button_image);
-        mSignInButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+                mSignInButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
                 showProgress(true);
                 //HERE WE TRY TO CONNECT TO THE SERVER TO KNOW IF THE USER IS REGISTER
                 try {

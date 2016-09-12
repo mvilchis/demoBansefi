@@ -1,11 +1,15 @@
 package com.datos.mvilchis.bancavf.activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.content.ContextCompat;
 import android.view.Menu;
 import android.view.View;
@@ -15,6 +19,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.datos.mvilchis.bancavf.R;
+import com.datos.mvilchis.bancavf.utilites.ConstantMessage;
 
 import org.w3c.dom.Text;
 
@@ -26,7 +31,12 @@ public class PaymentCodeActivity  extends  Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
         setContentView(R.layout.activity_paycellphone_code);
+        TextView ammount_text = (TextView) findViewById(R.id.ammount_text);
+        ammount_text.setText(prefs.getString("pay_ammount", ""));
+
         /*********** Intent list *****************/
         final Intent pay_code_intent = new Intent(this, PaymentQrActivity.class);
         /************ Work wiht table *************/
@@ -45,6 +55,35 @@ public class PaymentCodeActivity  extends  Activity {
                 Intent main_intent = new Intent(PaymentCodeActivity.this, MainActivity.class);
                 startActivity(main_intent);
                 finish();
+            }
+        });
+        /************** settings points button **************/
+        final ImageView settings = (ImageView)findViewById(R.id.settings);
+        settings.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String message_string = ConstantMessage.NOT_READY;
+                AlertDialog.Builder message_builder = ConstantMessage.createAlertMessage(PaymentCodeActivity.this,message_string );
+                message_builder.setPositiveButton(
+                        "Ok", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }});
+                AlertDialog message_alert = message_builder.create();
+                message_alert.show();
+            }
+        });
+        final ImageView share_button = (ImageView)findViewById(R.id.share_button);
+        share_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String message_string = ConstantMessage.NOT_READY;
+                AlertDialog.Builder message_builder = ConstantMessage.createAlertMessage(PaymentCodeActivity.this,message_string );
+                message_builder.setPositiveButton(
+                        "Ok", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }});
+                AlertDialog message_alert = message_builder.create();
+                message_alert.show();
             }
         });
     }

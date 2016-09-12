@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TableRow;
 
 import com.datos.mvilchis.bancavf.R;
 import com.datos.mvilchis.bancavf.utilites.ConstantMessage;
@@ -18,6 +19,11 @@ import com.datos.mvilchis.bancavf.utilites.ConstantMessage;
  * @author Miguel Alonso Vilchis Domínguez
  */
 public class MainActivity extends Activity {
+    private ImageView consultation_image;
+    private ImageView payment_image;
+    private ImageView collect_image;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +35,8 @@ public class MainActivity extends Activity {
         final Intent collect_intent = new Intent(this, CollectActivity.class);
 
         //************* Consultation  *************
-        final ImageView consultation_image = (ImageView)findViewById(R.id.logo1);
+        consultation_image = (ImageView)findViewById(R.id.logo1);
+        consultation_image.setBackgroundResource(R.color.app_background);
         consultation_image.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 consultation_image.setBackgroundResource(R.color.red_background);
@@ -38,19 +45,19 @@ public class MainActivity extends Activity {
             }
         });
         //************* Payment  *************
-        final ImageView payment_image = (ImageView)findViewById(R.id.logo3);
+        payment_image = (ImageView)findViewById(R.id.logo3);
         payment_image.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                payment_image.setBackgroundResource(R.color.red_background);
+                //payment_image.setBackgroundResource(R.color.red_background);
                 payment_intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(payment_intent);
             }
         });
         //************* Collect **************
-        final ImageView collect_image = (ImageView)findViewById(R.id.logo4);
+        collect_image  = (ImageView)findViewById(R.id.logo4);
         collect_image.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                collect_image.setBackgroundResource(R.color.red_background);
+                //collect_image.setBackgroundResource(R.color.red_background);
                 collect_intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(collect_intent);
             }
@@ -60,7 +67,7 @@ public class MainActivity extends Activity {
         final ImageView credit_image = (ImageView)findViewById(R.id.logo2);
         credit_image.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                credit_image.setBackgroundResource(R.color.red_background);
+                //credit_image.setBackgroundResource(R.color.red_background);
                 String message_string = ConstantMessage.NOT_READY;
                 AlertDialog.Builder message_builder = ConstantMessage.createAlertMessage(MainActivity.this,message_string );
                 message_builder.setPositiveButton(
@@ -78,7 +85,7 @@ public class MainActivity extends Activity {
         final ImageView save_image = (ImageView)findViewById(R.id.logo6);
         save_image.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                save_image.setBackgroundResource(R.color.red_background);
+                //save_image.setBackgroundResource(R.color.red_background);
                 String message_string = ConstantMessage.NOT_READY;
                 AlertDialog.Builder message_builder = ConstantMessage.createAlertMessage(MainActivity.this,message_string );
                 message_builder.setPositiveButton(
@@ -96,7 +103,7 @@ public class MainActivity extends Activity {
         final ImageView token_image = (ImageView)findViewById(R.id.logo8);
         token_image.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                token_image.setBackgroundResource(R.color.red_background);
+                //token_image.setBackgroundResource(R.color.red_background);
                 String message_string = ConstantMessage.NOT_READY;
                 AlertDialog.Builder message_builder = ConstantMessage.createAlertMessage(MainActivity.this,message_string );
                 message_builder.setPositiveButton(
@@ -130,6 +137,17 @@ public class MainActivity extends Activity {
         });
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        /** Restore all background of the images **/
+        consultation_image.setBackgroundResource(R.color.app_background);
+        payment_image.setBackgroundResource(R.color.app_background);
+        collect_image.setBackgroundResource(R.color.app_background);
+    }
+
+
 
 
     @Override

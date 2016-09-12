@@ -90,12 +90,13 @@
                         android:text="@string/amount"
                         android:layout_width="0dp" />
                     <TextView
+                        android:id="@+id/ammount_text"
                         android:textColor="@color/dark_gray_color_text"
                         android:textSize="30sp"
                         android:gravity="center"
                         android:layout_gravity="left"
                         android:layout_weight="1"
-                        android:text="15.247"
+                        android:text=""
                         android:layout_width="0dp" />
                 </TableRow>
                 <TableRow
@@ -129,6 +130,7 @@
                     android:weightSum="1"
                     >
                     <ImageButton
+                        android:id="@+id/share_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/share_button"

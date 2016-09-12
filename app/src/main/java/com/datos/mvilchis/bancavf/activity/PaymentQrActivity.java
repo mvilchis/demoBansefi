@@ -1,6 +1,8 @@
 package com.datos.mvilchis.bancavf.activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -15,6 +17,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.datos.mvilchis.bancavf.R;
+import com.datos.mvilchis.bancavf.utilites.ConstantMessage;
 
 import org.w3c.dom.Text;
 
@@ -44,6 +47,21 @@ public class PaymentQrActivity  extends  Activity {
                 Intent payment_intent = new Intent(PaymentQrActivity.this, PaymentActivity.class);
                 startActivity(payment_intent);
                 finish();
+            }
+        });
+        /************** settings points button **************/
+        final ImageView settings = (ImageView)findViewById(R.id.settings);
+        settings.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String message_string = ConstantMessage.NOT_READY;
+                AlertDialog.Builder message_builder = ConstantMessage.createAlertMessage(PaymentQrActivity.this,message_string );
+                message_builder.setPositiveButton(
+                        "Ok", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }});
+                AlertDialog message_alert = message_builder.create();
+                message_alert.show();
             }
         });
     }

@@ -26,6 +26,8 @@ import org.w3c.dom.Text;
  * @author Miguel Alonso Vilchis Domínguez
  */
 public class PaymentActivity  extends  Activity {
+    private TableRow pay_with_cell;
+    private TextView pay_cell_child;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,8 +35,8 @@ public class PaymentActivity  extends  Activity {
         /*********** Intent list *****************/
         final Intent pay_cellphone_intent = new Intent(this, PaymentCellActivity.class);
         /************ Work wiht table *************/
-        final TableRow pay_with_cell = (TableRow) findViewById(R.id.pay_with_cellphone);
-        final TextView pay_cell_child = (TextView)findViewById(R.id.pay_cell_child);
+        pay_with_cell = (TableRow) findViewById(R.id.pay_with_cellphone);
+        pay_cell_child = (TextView)findViewById(R.id.pay_cell_child);
         pay_with_cell.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 pay_with_cell.setBackgroundResource(R.color.red_background);
@@ -131,8 +133,29 @@ public class PaymentActivity  extends  Activity {
                 finish();
             }
         });
+        /************** settings points button **************/
+        final ImageView settings = (ImageView)findViewById(R.id.settings);
+        settings.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String message_string = ConstantMessage.NOT_READY;
+                AlertDialog.Builder message_builder = ConstantMessage.createAlertMessage(PaymentActivity.this,message_string );
+                message_builder.setPositiveButton(
+                        "Ok", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }});
+                AlertDialog message_alert = message_builder.create();
+                message_alert.show();
+            }
+        });
     }
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        /** Restore all background of the images **/
+        pay_with_cell.setBackgroundResource(R.color.app_background);
+        pay_cell_child.setTextColor(Color.parseColor(ConstantMessage.TEXT_COLOR));
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;
