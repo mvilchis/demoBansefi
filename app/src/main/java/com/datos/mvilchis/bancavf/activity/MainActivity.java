@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
@@ -48,7 +50,7 @@ public class MainActivity extends Activity {
         payment_image = (ImageView)findViewById(R.id.logo3);
         payment_image.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //payment_image.setBackgroundResource(R.color.red_background);
+                payment_image.setBackgroundResource(R.color.red_background);
                 payment_intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(payment_intent);
             }
@@ -57,7 +59,7 @@ public class MainActivity extends Activity {
         collect_image  = (ImageView)findViewById(R.id.logo4);
         collect_image.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //collect_image.setBackgroundResource(R.color.red_background);
+                collect_image.setBackgroundResource(R.color.red_background);
                 collect_intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(collect_intent);
             }
@@ -67,7 +69,7 @@ public class MainActivity extends Activity {
         final ImageView credit_image = (ImageView)findViewById(R.id.logo2);
         credit_image.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //credit_image.setBackgroundResource(R.color.red_background);
+                credit_image.setBackgroundResource(R.color.red_background);
                 String message_string = ConstantMessage.NOT_READY;
                 AlertDialog.Builder message_builder = ConstantMessage.createAlertMessage(MainActivity.this,message_string );
                 message_builder.setPositiveButton(
@@ -85,7 +87,7 @@ public class MainActivity extends Activity {
         final ImageView save_image = (ImageView)findViewById(R.id.logo6);
         save_image.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //save_image.setBackgroundResource(R.color.red_background);
+                save_image.setBackgroundResource(R.color.red_background);
                 String message_string = ConstantMessage.NOT_READY;
                 AlertDialog.Builder message_builder = ConstantMessage.createAlertMessage(MainActivity.this,message_string );
                 message_builder.setPositiveButton(
@@ -103,7 +105,7 @@ public class MainActivity extends Activity {
         final ImageView token_image = (ImageView)findViewById(R.id.logo8);
         token_image.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //token_image.setBackgroundResource(R.color.red_background);
+                token_image.setBackgroundResource(R.color.red_background);
                 String message_string = ConstantMessage.NOT_READY;
                 AlertDialog.Builder message_builder = ConstantMessage.createAlertMessage(MainActivity.this,message_string );
                 message_builder.setPositiveButton(
@@ -128,6 +130,24 @@ public class MainActivity extends Activity {
                         "Ok", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 help_image.setBackgroundResource(R.color.app_background);
+                                dialog.cancel();
+
+                            }});
+                AlertDialog message_alert = message_builder.create();
+                message_alert.show();
+            }
+        });
+        //      Messages
+        final ImageView messages_image = (ImageView)findViewById(R.id.logo7);
+        messages_image.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                messages_image.setBackgroundResource(R.color.red_background);
+                String message_string = ConstantMessage.NOT_READY;
+                AlertDialog.Builder message_builder = ConstantMessage.createAlertMessage(MainActivity.this,message_string );
+                message_builder.setPositiveButton(
+                        "Ok", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                messages_image.setBackgroundResource(R.color.app_background);
                                 dialog.cancel();
 
                             }});

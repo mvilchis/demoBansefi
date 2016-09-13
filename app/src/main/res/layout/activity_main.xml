@@ -27,14 +27,14 @@
             >
             <ImageView
                 android:id="@+id/logo1"
-                android:src="@drawable/logo1"
+                android:src="@drawable/logo_1"
                 android:layout_gravity="center"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5" />
             <ImageView
                 android:id="@+id/logo2"
-                android:src="@drawable/logo2"
+                android:src="@drawable/logo_2"
                 android:layout_gravity="center"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -51,13 +51,13 @@
             >
             <ImageView
                 android:id="@+id/logo3"
-                android:src="@drawable/logo3"
+                android:src="@drawable/logo_3"
                 android:layout_gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.5" />
             <ImageView
                 android:id="@+id/logo4"
-                android:src="@drawable/logo4"
+                android:src="@drawable/logo_4"
                 android:layout_gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.5"
@@ -73,13 +73,13 @@
             >
             <ImageView
                 android:id="@+id/logo6"
-                android:src="@drawable/logo6"
+                android:src="@drawable/logo_6"
                 android:layout_gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.5" />
             <ImageView
                 android:id="@+id/logo7"
-                android:src="@drawable/logo7"
+                android:src="@drawable/logo_7"
                 android:layout_gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.5"
@@ -94,13 +94,13 @@
             >
             <ImageView
                 android:id="@+id/logo8"
-                android:src="@drawable/logo8"
+                android:src="@drawable/logo_8"
                 android:layout_gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.5" />
             <ImageView
                 android:id="@+id/logo9"
-                android:src="@drawable/logo9"
+                android:src="@drawable/logo_9"
                 android:layout_gravity="center"
                 android:layout_width="0dp"
                 android:layout_weight="0.5"

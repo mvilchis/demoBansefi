@@ -2,9 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.datos.mvilchis.bancavf">
 
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
 
     <application
         android:allowBackup="true"
@@ -18,7 +15,6 @@
             android:icon= "@drawable/logo_bansefi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
@@ -38,8 +34,6 @@
         <activity
         android:name=".activity.MainActivity"
         android:windowSoftInputMode="adjustPan|stateHidden">
-
-
         </activity>
         <!-- Consultation activities -->
         <activity

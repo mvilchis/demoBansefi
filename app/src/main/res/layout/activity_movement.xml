@@ -26,7 +26,7 @@
 
         <TableRow
             android:id="@+id/tableRow3"
-            android:background="@color/red_background"
+            android:background="@color/color_red"
             android:layout_weight="10"
             android:layout_width="match_parent"
             android:gravity="center">

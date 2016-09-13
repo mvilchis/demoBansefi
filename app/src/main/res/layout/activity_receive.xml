@@ -35,7 +35,8 @@
             android:gravity="top|center"
             android:orientation="vertical"
             android:layout_gravity="center"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:paddingTop="60dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -43,20 +44,15 @@
                 android:textSize="20sp"
                 android:gravity="start"
                 />
-        </TableRow>
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="0dip"
-            android:layout_weight="1"
 
-            android:gravity="center"
-            >
             <TextView
                 android:layout_width="wrap_content"
                 android:text="$60"
                 android:textSize="30dp"
                 android:gravity="center"
-                />
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:layout_column="5" />
         </TableRow>
 
         <TableRow

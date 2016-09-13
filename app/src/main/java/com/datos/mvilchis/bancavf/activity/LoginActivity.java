@@ -17,17 +17,18 @@ import com.datos.mvilchis.bancavf.R;
 public class LoginActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        prefs.edit().putBoolean("Islogin", true).commit();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ImageButton mSignInButton = (ImageButton) findViewById(R.id.sign_in_button);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        prefs.edit().putBoolean("Islogin", true).commit();
+        ImageButton mSignInButton = (ImageButton) findViewById(R.id.login_button);
+        final Intent mainIntent = new Intent(this, MainActivity.class);
+
         mSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(mainIntent);
-                finish();
+                //finish();
             }
         });
 

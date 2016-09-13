@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
     android:layout_height="match_parent">
 
     <TableLayout
@@ -64,19 +65,19 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:gravity="center"
-            >
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
             <EditText
                 android:id="@+id/user_id"
                 android:layout_width="match_parent"
                 android:gravity="center"
                 android:layout_height="wrap_content"
-                android:imeActionId="@+id/login"
-                android:imeOptions="actionUnspecified"
                 android:maxLines="1"
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:textColor="@color/color_text"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:paddingRight="10dp" />
         </TableRow>
 
         <TableRow
@@ -106,7 +107,8 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:gravity="center"
-            >
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
             <EditText
                 android:id="@+id/user_password"
                 android:layout_width="match_parent"
@@ -132,6 +134,8 @@
             android:weightSum="1">
 
             <ImageButton
+                android:id="@+id/login_button"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/sign_in"
@@ -140,20 +144,5 @@
         </TableRow>
     </TableLayout>
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center|bottom"
-        android:orientation="vertical"
-        android:weightSum="1">
 
-        <ImageButton
-            android:id="@+id/sign_in_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/sign_in"
-            android:inputType="textPassword"
-            android:layout_weight="1" />
-    </TableRow>
 </LinearLayout>

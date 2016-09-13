@@ -48,7 +48,7 @@
             >
             <TextView
                 android:id="@+id/change_to_qr"
-                android:textColor="@color/red_background"
+                android:textColor="@color/color_red"
                 android:textSize="20sp"
                 android:gravity="center"
                 android:layout_gravity="center_vertical"
@@ -57,7 +57,7 @@
                 android:layout_width="0dp" />
             <TextView
                 android:textColor="#FFFFFF"
-                android:background="@color/red_background"
+                android:background="@color/color_red"
                 android:textSize="20sp"
                 android:gravity="center"
                 android:layout_gravity="center_vertical"
